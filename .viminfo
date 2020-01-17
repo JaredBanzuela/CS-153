@@ -22,30 +22,42 @@
 # Registers:
 
 # File marks:
-'0  45  10  ~/xv6/proc.h
-'1  110  12  ~/xv6/proc.c
-'2  4  10  ~/xv6/sysproc.c
-'3  123  0  ~/xv6/defs.h
-'4  1  0  ~/xv6/def.h
-'5  6  2  ~/xv6/user.h
-'6  239  4  ~/xv6/proc.c
-'7  160  0  ~/xv6/defs.h
-'8  7  0  ~/xv6/user.h
-'9  1  0  ~/xv6/gdb
+'0  105  0  ~/xv6/Makefile
+'1  313  11  ~/xv6/proc.c
+'2  37  14  ~/xv6/proc.h
+'3  312  17  ~/xv6/proc.c
+'4  26  2  ~/xv6/sysproc.c
+'5  288  9  ~/xv6/proc.c
+'6  7  0  ~/xv6/user.h
+'7  109  23  ~/xv6/defs.h
+'8  19  0  ~/xv6/sysproc.c
+'9  235  0  ~/xv6/proc.c
 
 # Jumplist (newest first):
--'  45  10  ~/xv6/proc.h
--'  1  0  ~/xv6/proc.h
--'  110  12  ~/xv6/proc.c
--'  239  4  ~/xv6/proc.c
--'  4  10  ~/xv6/sysproc.c
--'  1  0  ~/xv6/sysproc.c
+-'  105  0  ~/xv6/Makefile
+-'  1  0  ~/xv6/Makefile
+-'  313  11  ~/xv6/proc.c
+-'  312  4  ~/xv6/proc.c
+-'  37  14  ~/xv6/proc.h
+-'  52  2  ~/xv6/proc.h
+-'  288  8  ~/xv6/proc.c
+-'  26  2  ~/xv6/sysproc.c
+-'  19  2  ~/xv6/sysproc.c
+-'  235  2  ~/xv6/proc.c
+-'  7  0  ~/xv6/user.h
+-'  109  23  ~/xv6/defs.h
 -'  123  0  ~/xv6/defs.h
+-'  16  0  ~/xv6/user.h
+-'  4  0  ~/xv6/sysproc.c
+-'  110  2  ~/xv6/proc.c
+-'  45  2  ~/xv6/proc.h
+-'  6  0  ~/xv6/user.h
+-'  1  0  ~/xv6/proc.h
+-'  242  4  ~/xv6/proc.c
+-'  1  0  ~/xv6/sysproc.c
 -'  160  0  ~/xv6/defs.h
 -'  1  0  ~/xv6/def.h
--'  6  2  ~/xv6/user.h
 -'  1  0  ~/xv6/proc.c
--'  7  0  ~/xv6/user.h
 -'  1  0  ~/xv6/defs.h
 -'  1  0  ~/xv6/user.h
 -'  1  0  ~/xv6/gdb
@@ -121,38 +133,53 @@
 -'  27  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/gdb
--'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
 
 # History of marks within files (newest to oldest):
 
-> ~/xv6/proc.h
-	"	45	10
+> ~/xv6/Makefile
+	"	105	0
 
 > ~/xv6/proc.c
-	"	110	12
+	"	313	11
+	^	313	12
+	.	313	11
+	+	228	14
+	+	236	1
+	+	235	1
+	+	236	0
+	+	235	31
+	+	234	13
+	+	276	15
+	+	312	22
+	+	312	8
+	+	313	11
+
+> ~/xv6/proc.h
+	"	37	14
+	^	52	42
+	.	52	41
+	+	52	41
 
 > ~/xv6/sysproc.c
-	"	4	10
+	"	26	2
+	^	19	1
+	.	19	8
+	+	19	8
+
+> ~/xv6/user.h
+	"	7	0
+	^	7	12
+	.	6	11
+	+	6	11
 
 > ~/xv6/defs.h
-	"	123	0
+	"	109	23
+	^	109	24
+	.	107	23
+	+	107	23
 
 > ~/xv6/def.h
 	"	1	0
-
-> ~/xv6/user.h
-	"	6	2
 
 > ~/xv6/gdb
 	"	1	0
