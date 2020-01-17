@@ -8,8 +8,8 @@
 # hlsearch on (H) or off (h):
 ~H
 # Command Line History (newest to oldest):
-:q
 :x
+:q
 
 # Search String History (newest to oldest):
 
@@ -22,18 +22,19 @@
 # Registers:
 
 # File marks:
-'0  105  0  ~/xv6/Makefile
-'1  313  11  ~/xv6/proc.c
-'2  37  14  ~/xv6/proc.h
-'3  312  17  ~/xv6/proc.c
-'4  26  2  ~/xv6/sysproc.c
-'5  288  9  ~/xv6/proc.c
-'6  7  0  ~/xv6/user.h
-'7  109  23  ~/xv6/defs.h
-'8  19  0  ~/xv6/sysproc.c
-'9  235  0  ~/xv6/proc.c
+'0  1  3  ~/xv6/test.c
+'1  105  0  ~/xv6/Makefile
+'2  313  11  ~/xv6/proc.c
+'3  37  14  ~/xv6/proc.h
+'4  312  17  ~/xv6/proc.c
+'5  26  2  ~/xv6/sysproc.c
+'6  288  9  ~/xv6/proc.c
+'7  7  0  ~/xv6/user.h
+'8  109  23  ~/xv6/defs.h
+'9  19  0  ~/xv6/sysproc.c
 
 # Jumplist (newest first):
+-'  1  3  ~/xv6/test.c
 -'  105  0  ~/xv6/Makefile
 -'  1  0  ~/xv6/Makefile
 -'  313  11  ~/xv6/proc.c
@@ -131,10 +132,14 @@
 -'  27  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/.gdbinit
 -'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  1  57  ~/.gdbinit
 
 # History of marks within files (newest to oldest):
+
+> ~/xv6/test.c
+	"	1	3
+	^	1	4
+	.	1	3
+	+	1	3
 
 > ~/xv6/Makefile
 	"	105	0
