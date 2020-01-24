@@ -22,18 +22,21 @@
 # Registers:
 
 # File marks:
-'0  16  0  ~/.gitignore
-'1  1  0  ~/.gdbinit.tmp1
-'2  1  0  ~/.gdbinit
-'3  27  0  ~/.gdbinit
-'4  2  0  ~/.gdbinit
-'5  27  0  ~/xv6/.gdbinit
-'6  1  4  ~/xv6/test2.c
-'7  1  3  ~/xv6/test.c
-'8  105  0  ~/xv6/Makefile
-'9  313  11  ~/xv6/proc.c
+'0  184  6  ~/xv6/Makefile
+'1  1  3  ~/xv6/testfile.txt
+'2  16  0  ~/.gitignore
+'3  1  0  ~/.gdbinit.tmp1
+'4  1  0  ~/.gdbinit
+'5  27  0  ~/.gdbinit
+'6  2  0  ~/.gdbinit
+'7  27  0  ~/xv6/.gdbinit
+'8  1  4  ~/xv6/test2.c
+'9  1  3  ~/xv6/test.c
 
 # Jumplist (newest first):
+-'  184  6  ~/xv6/Makefile
+-'  105  1  ~/xv6/Makefile
+-'  1  3  ~/xv6/testfile.txt
 -'  16  0  ~/.gitignore
 -'  1  0  ~/.gitignore
 -'  1  0  ~/.gdbinit.tmp1
@@ -43,7 +46,6 @@
 -'  27  0  ~/xv6/.gdbinit
 -'  1  4  ~/xv6/test2.c
 -'  1  3  ~/xv6/test.c
--'  105  0  ~/xv6/Makefile
 -'  1  0  ~/xv6/Makefile
 -'  313  11  ~/xv6/proc.c
 -'  312  4  ~/xv6/proc.c
@@ -80,8 +82,6 @@
 -'  27  0  ~/xv6/.gdbinit
 -'  1  4  ~/xv6/test2.c
 -'  1  3  ~/xv6/test.c
--'  105  0  ~/xv6/Makefile
--'  1  0  ~/xv6/Makefile
 -'  313  11  ~/xv6/proc.c
 -'  312  4  ~/xv6/proc.c
 -'  37  14  ~/xv6/proc.h
@@ -116,8 +116,6 @@
 -'  27  0  ~/xv6/.gdbinit
 -'  1  4  ~/xv6/test2.c
 -'  1  3  ~/xv6/test.c
--'  105  0  ~/xv6/Makefile
--'  1  0  ~/xv6/Makefile
 -'  313  11  ~/xv6/proc.c
 -'  312  4  ~/xv6/proc.c
 -'  37  14  ~/xv6/proc.h
@@ -130,11 +128,20 @@
 -'  109  23  ~/xv6/defs.h
 -'  123  0  ~/xv6/defs.h
 -'  16  0  ~/xv6/user.h
--'  4  0  ~/xv6/sysproc.c
--'  110  2  ~/xv6/proc.c
--'  1  0  ~/.gdbinit
 
 # History of marks within files (newest to oldest):
+
+> ~/xv6/Makefile
+	"	184	6
+	^	184	7
+	.	184	6
+	+	184	6
+
+> ~/xv6/testfile.txt
+	"	1	3
+	^	1	4
+	.	1	3
+	+	1	3
 
 > ~/.gitignore
 	"	16	0
@@ -159,9 +166,6 @@
 	^	1	4
 	.	1	3
 	+	1	3
-
-> ~/xv6/Makefile
-	"	105	0
 
 > ~/xv6/proc.c
 	"	313	11
