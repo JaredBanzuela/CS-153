@@ -7,11 +7,27 @@
 
 # hlsearch on (H) or off (h):
 ~H
+# Last Search Pattern:
+~MSle0/exit
+
+# Last Substitute Search Pattern:
+~MSle0~&exit()
+
+# Last Substitute String:
+$exit(0)
+
 # Command Line History (newest to oldest):
 :x
+:%s/exit()/exit(0)/g
 :q
+:set hlsearch
+:set lhsearch
+:set hlsearch /exit
+:q!
 
 # Search String History (newest to oldest):
+? exit()
+?/exit
 
 # Expression History (newest to oldest):
 
@@ -20,28 +36,81 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+"1	LINE	0
+		 exit(0);
+""-	CHAR	0
+	}
 
 # File marks:
-'0  15  3  ~/.gitignore
-'1  26  1  ~/xv6/lab1.c
-'2  1  0  ~/xv6/qemu-nox-gdb
-'3  306  0  ~/xv6/usertests.c
-'4  44  1  ~/xv6/Makefile
-'5  1  0  ~/xv6/Makefiel
-'6  1  0  ~/xv6/testfile.txt
-'7  150  0  ~/xv6/Makefile
-'8  205  0  ~/xv6/Makefile
-'9  65  1  ~/xv6/Makefile
+'0  14  0  ~/xv6/zombie.c
+'1  54  0  ~/xv6/wc.c
+'2  1551  0  ~/xv6/usertests.c
+'3  533  1  ~/xv6/proc.c
+'4  1  0  ~/xv6/sysproc.c
+'5  455  9  ~/xv6/usertests.c
+'6  47  0  ~/xv6/stressfs.c
+'7  1  0  ~/xv6/stresssfs.c
+'8  493  0  ~/xv6/sh.c
+'9  23  0  ~/xv6/rm.c
 
 # Jumplist (newest first):
+-'  14  0  ~/xv6/zombie.c
+-'  1  0  ~/xv6/zombie.c
+-'  54  0  ~/xv6/wc.c
+-'  47  0  ~/xv6/wc.c
+-'  1  0  ~/xv6/wc.c
+-'  1551  0  ~/xv6/usertests.c
+-'  573  16  ~/xv6/usertests.c
+-'  455  2  ~/xv6/usertests.c
+-'  533  1  ~/xv6/proc.c
+-'  1  0  ~/xv6/proc.c
+-'  1  0  ~/xv6/sysproc.c
+-'  11  0  ~/xv6/sysproc.c
+-'  1  0  ~/xv6/usertests.c
+-'  47  0  ~/xv6/stressfs.c
+-'  1  0  ~/xv6/stressfs.c
+-'  1  0  ~/xv6/stresssfs.c
+-'  493  0  ~/xv6/sh.c
+-'  1  0  ~/xv6/sh.c
+-'  23  0  ~/xv6/rm.c
+-'  1  0  ~/xv6/rm.c
+-'  23  0  ~/xv6/mkdir.c
+-'  1  0  ~/xv6/mkdir.c
+-'  84  7  ~/xv6/ls.c
+-'  1  0  ~/xv6/ls.c
+-'  14  7  ~/xv6/ln.c
+-'  1  0  ~/xv6/ln.c
+-'  14  7  ~/xv6/kill.c
+-'  1  0  ~/xv6/kill.c
+-'  1  0  ~/xv6/init.c
+-'  7  0  ~/xv6/init.c
+-'  1  0  ~/xv6/grep.c
+-'  69  0  ~/xv6/grep.c
+-'  45  9  ~/xv6/forktest.c
+-'  55  2  ~/xv6/forktest.c
+-'  1  0  ~/xv6/forktest.c
+-'  12  7  ~/xv6/echo.c
+-'  1  0  ~/xv6/echo.c
+-'  1  2  ~/xv6/cat.c
+-'  31  4  ~/xv6/cat.c
+-'  7  0  ~/xv6/lab1.c
+-'  3  0  ~/xv6/lab1.c
+-'  26  2  ~/xv6/sysproc.c
+-'  7  11  ~/xv6/user.h
+-'  6  0  ~/xv6/user.h
+-'  107  23  ~/xv6/defs.h
+-'  109  0  ~/xv6/defs.h
+-'  2  0  ~/xv6/types.h
+-'  1  0  ~/xv6/types.h
+-'  24  2  ~/xv6/lab1.c
+-'  26  1  ~/xv6/lab1.c
+-'  216  24  ~/xv6/Makefile
+-'  44  1  ~/xv6/Makefile
 -'  15  3  ~/.gitignore
 -'  16  0  ~/.gitignore
--'  26  1  ~/xv6/lab1.c
 -'  1  0  ~/xv6/lab1.c
 -'  1  0  ~/xv6/qemu-nox-gdb
 -'  306  0  ~/xv6/usertests.c
--'  1  0  ~/xv6/usertests.c
--'  44  1  ~/xv6/Makefile
 -'  150  1  ~/xv6/Makefile
 -'  1  0  ~/xv6/Makefiel
 -'  1  0  ~/xv6/testfile.txt
@@ -63,23 +132,17 @@
 -'  37  14  ~/xv6/proc.h
 -'  52  2  ~/xv6/proc.h
 -'  288  8  ~/xv6/proc.c
--'  26  2  ~/xv6/sysproc.c
 -'  19  2  ~/xv6/sysproc.c
 -'  235  2  ~/xv6/proc.c
--'  7  0  ~/xv6/user.h
--'  109  23  ~/xv6/defs.h
 -'  123  0  ~/xv6/defs.h
 -'  16  0  ~/xv6/user.h
 -'  4  0  ~/xv6/sysproc.c
 -'  110  2  ~/xv6/proc.c
 -'  45  2  ~/xv6/proc.h
--'  6  0  ~/xv6/user.h
 -'  1  0  ~/xv6/proc.h
 -'  242  4  ~/xv6/proc.c
--'  1  0  ~/xv6/sysproc.c
 -'  160  0  ~/xv6/defs.h
 -'  1  0  ~/xv6/def.h
--'  1  0  ~/xv6/proc.c
 -'  1  0  ~/xv6/defs.h
 -'  1  0  ~/xv6/user.h
 -'  1  0  ~/xv6/gdb
@@ -90,143 +153,190 @@
 -'  1  0  ~/xv6/gdb
 -'  1  0  ~/xv6/gdb
 -'  1  0  ~/xv6/gdb
--'  27  0  ~/xv6/.gdbinit
--'  1  4  ~/xv6/test2.c
--'  1  3  ~/xv6/test.c
--'  313  11  ~/xv6/proc.c
--'  312  4  ~/xv6/proc.c
--'  37  14  ~/xv6/proc.h
--'  52  2  ~/xv6/proc.h
--'  288  8  ~/xv6/proc.c
--'  26  2  ~/xv6/sysproc.c
--'  19  2  ~/xv6/sysproc.c
--'  235  2  ~/xv6/proc.c
--'  7  0  ~/xv6/user.h
--'  109  23  ~/xv6/defs.h
--'  123  0  ~/xv6/defs.h
--'  16  0  ~/xv6/user.h
--'  4  0  ~/xv6/sysproc.c
--'  110  2  ~/xv6/proc.c
--'  45  2  ~/xv6/proc.h
--'  6  0  ~/xv6/user.h
--'  1  0  ~/xv6/proc.h
--'  242  4  ~/xv6/proc.c
--'  1  0  ~/xv6/sysproc.c
--'  160  0  ~/xv6/defs.h
--'  1  0  ~/xv6/def.h
--'  1  0  ~/xv6/proc.c
--'  1  0  ~/xv6/defs.h
--'  1  0  ~/xv6/user.h
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  27  0  ~/xv6/.gdbinit
--'  1  4  ~/xv6/test2.c
--'  1  3  ~/xv6/test.c
--'  313  11  ~/xv6/proc.c
--'  312  4  ~/xv6/proc.c
--'  37  14  ~/xv6/proc.h
--'  52  2  ~/xv6/proc.h
--'  288  8  ~/xv6/proc.c
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore
-	"	15	3
-	^	15	4
-	.	17	7
-	+	17	7
+> ~/xv6/zombie.c
+	"	14	0
+	^	14	1
+	.	13	7
+	+	13	7
 
-> ~/xv6/lab1.c
-	"	26	1
-
-> ~/xv6/qemu-nox-gdb
-	"	1	0
+> ~/xv6/wc.c
+	"	54	0
+	.	30	0
+	+	30	0
 
 > ~/xv6/usertests.c
-	"	306	0
-
-> ~/xv6/Makefile
-	"	44	1
-	^	184	7
-	.	184	6
-	+	184	6
-
-> ~/xv6/Makefiel
-	"	1	0
-
-> ~/xv6/testfile.txt
-	"	1	0
-	^	1	4
-	.	1	3
-	+	1	3
-
-> ~/.gdbinit.tmp1
-	"	1	0
-
-> ~/.gdbinit
-	"	1	0
-
-> ~/xv6/.gdbinit
-	"	27	0
-
-> ~/xv6/test2.c
-	"	1	4
-	^	1	5
-	.	1	4
-	+	1	4
-
-> ~/xv6/test.c
-	"	1	3
-	^	1	4
-	.	1	3
-	+	1	3
+	"	1551	0
+	^	548	3
+	.	41	0
+	+	24	9
+	+	28	9
+	+	32	9
+	+	36	9
+	+	52	9
+	+	57	11
+	+	61	11
+	+	65	11
+	+	67	9
+	+	92	9
+	+	97	9
+	+	103	11
+	+	105	9
+	+	110	9
+	+	127	9
+	+	133	9
+	+	150	9
+	+	155	11
+	+	159	11
+	+	169	9
+	+	176	9
+	+	182	9
+	+	197	9
+	+	204	11
+	+	213	9
+	+	222	13
+	+	227	11
+	+	232	11
+	+	239	9
+	+	273	9
+	+	278	9
+	+	283	9
+	+	288	9
+	+	299	9
+	+	313	9
+	+	324	13
+	+	327	9
+	+	346	11
+	+	352	9
+	+	421	11
+	+	450	11
+	+	454	9
+	+	487	9
+	+	511	9
+	+	533	11
+	+	540	13
+	+	41	0
 
 > ~/xv6/proc.c
-	"	313	11
-	^	313	12
-	.	313	11
+	"	533	1
+	^	534	1
+	.	534	0
 	+	228	14
-	+	236	1
-	+	235	1
-	+	236	0
-	+	235	31
-	+	234	13
-	+	276	15
-	+	312	22
-	+	312	8
-	+	313	11
-
-> ~/xv6/proc.h
-	"	37	14
-	^	52	42
-	.	52	41
-	+	52	41
+	+	534	0
 
 > ~/xv6/sysproc.c
-	"	26	2
-	^	19	1
-	.	19	8
-	+	19	8
+	"	1	0
+	^	1	1
+	.	19	7
+	+	19	7
+
+> ~/xv6/stressfs.c
+	"	47	0
+	^	47	0
+	.	48	7
+	+	48	7
+
+> ~/xv6/stresssfs.c
+	"	1	0
+
+> ~/xv6/sh.c
+	"	493	0
+	^	493	1
+	.	178	7
+	+	68	9
+	+	77	11
+	+	87	11
+	+	130	7
+	+	171	7
+	+	178	7
+
+> ~/xv6/rm.c
+	"	23	0
+	^	23	1
+	.	22	7
+	+	12	9
+	+	22	7
+
+> ~/xv6/mkdir.c
+	"	23	0
+	^	23	1
+	.	22	7
+	+	12	9
+	+	22	7
+
+> ~/xv6/ls.c
+	"	84	7
+	^	84	8
+	.	84	7
+	+	80	9
+	+	84	7
+
+> ~/xv6/ln.c
+	"	14	7
+	^	14	8
+	.	14	7
+	+	10	9
+	+	14	7
+
+> ~/xv6/kill.c
+	"	14	7
+	^	14	8
+	.	16	7
+	+	12	9
+	+	16	7
+
+> ~/xv6/init.c
+	"	1	0
+	^	1	1
+	.	32	11
+	+	27	11
+	+	32	11
+
+> ~/xv6/grep.c
+	"	1	0
+	^	1	1
+	.	63	7
+	+	46	9
+	+	52	9
+	+	58	11
+	+	63	7
+
+> ~/xv6/forktest.c
+	"	45	9
+	^	45	10
+	.	45	9
+	+	28	11
+	+	33	9
+	+	39	11
+	+	55	7
+	+	45	9
+
+> ~/xv6/echo.c
+	"	12	7
+	^	12	8
+	.	12	7
+	+	12	7
+
+> ~/xv6/cat.c
+	"	1	2
+	^	40	3
+	.	42	7
+	+	20	9
+	+	31	9
+	+	37	11
+	+	15	11
+	+	42	7
+
+> ~/xv6/lab1.c
+	"	7	0
+	^	24	0
+	.	24	0
+	+	24	0
 
 > ~/xv6/user.h
-	"	7	0
+	"	7	11
 	^	7	12
 	.	6	11
 	+	6	11
-
-> ~/xv6/defs.h
-	"	109	23
-	^	109	24
-	.	107	23
-	+	107	23
-
-> ~/xv6/def.h
-	"	1	0
-
-> ~/xv6/gdb
-	"	1	0
