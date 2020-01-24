@@ -22,18 +22,19 @@
 # Registers:
 
 # File marks:
-'0  1  4  ~/xv6/test2.c
-'1  1  3  ~/xv6/test.c
-'2  105  0  ~/xv6/Makefile
-'3  313  11  ~/xv6/proc.c
-'4  37  14  ~/xv6/proc.h
-'5  312  17  ~/xv6/proc.c
-'6  26  2  ~/xv6/sysproc.c
-'7  288  9  ~/xv6/proc.c
-'8  7  0  ~/xv6/user.h
-'9  109  23  ~/xv6/defs.h
+'0  27  0  ~/xv6/.gdbinit
+'1  1  4  ~/xv6/test2.c
+'2  1  3  ~/xv6/test.c
+'3  105  0  ~/xv6/Makefile
+'4  313  11  ~/xv6/proc.c
+'5  37  14  ~/xv6/proc.h
+'6  312  17  ~/xv6/proc.c
+'7  26  2  ~/xv6/sysproc.c
+'8  288  9  ~/xv6/proc.c
+'9  7  0  ~/xv6/user.h
 
 # Jumplist (newest first):
+-'  27  0  ~/xv6/.gdbinit
 -'  1  4  ~/xv6/test2.c
 -'  1  3  ~/xv6/test.c
 -'  105  0  ~/xv6/Makefile
@@ -64,76 +65,30 @@
 -'  1  0  ~/xv6/user.h
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 -'  1  0  ~/xv6/gdb
 -'  1  57  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/.gdbinit
 
 # History of marks within files (newest to oldest):
+
+> ~/xv6/.gdbinit
+	"	27	0
 
 > ~/xv6/test2.c
 	"	1	4
@@ -197,6 +152,3 @@
 
 > ~/.gdbinit
 	"	1	57
-
-> ~/xv6/.gdbinit
-	"	27	0
