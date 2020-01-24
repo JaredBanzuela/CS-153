@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0/exit
+~MSle0/exit()
 
 # Last Substitute Search Pattern:
 ~MSle0~&exit()
@@ -19,14 +19,21 @@ $exit(0)
 # Command Line History (newest to oldest):
 :x
 :%s/exit()/exit(0)/g
+:q!
 :q
+:%s/wait()/wait(0)/g
 :set hlsearch
+:noh
 :set lhsearch
 :set hlsearch /exit
-:q!
 
 # Search String History (newest to oldest):
 ? exit()
+?/exit()
+?/waitpid
+? wait()
+?/wait()
+?/%s/wait()/wait(0)/g
 ?/exit
 
 # Expression History (newest to oldest):
@@ -36,41 +43,83 @@ $exit(0)
 # Input Line History (newest to oldest):
 
 # Registers:
-"1	LINE	0
+""1	LINE	0
+		exit_status = 0;
+"2	LINE	0
+		ret_pid = 0;
+"3	LINE	0
 		 exit(0);
-""-	CHAR	0
+"-	CHAR	0
 	}
 
 # File marks:
-'0  14  0  ~/xv6/zombie.c
-'1  54  0  ~/xv6/wc.c
-'2  1551  0  ~/xv6/usertests.c
-'3  533  1  ~/xv6/proc.c
-'4  1  0  ~/xv6/sysproc.c
-'5  455  9  ~/xv6/usertests.c
-'6  47  0  ~/xv6/stressfs.c
-'7  1  0  ~/xv6/stresssfs.c
-'8  493  0  ~/xv6/sh.c
-'9  23  0  ~/xv6/rm.c
+'0  111  4  ~/xv6/trap.c
+'1  26  14  ~/xv6/sysproc.c
+'2  508  0  ~/xv6/proc.c
+'3  312  0  ~/xv6/proc.c
+'4  116  17  ~/xv6/lab1.c
+'5  62  3  ~/xv6/lab1.c
+'6  75  0  ~/xv6/lab1.c
+'7  1  0  ~/xv6/lab1.c
+'8  26  25  ~/xv6/user.h
+'9  126  1  ~/xv6/lab1.c
 
 # Jumplist (newest first):
+-'  111  4  ~/xv6/trap.c
+-'  27  0  ~/xv6/trap.c
+-'  1  0  ~/xv6/trap.c
+-'  26  14  ~/xv6/sysproc.c
+-'  1  0  ~/xv6/sysproc.c
+-'  508  0  ~/xv6/proc.c
+-'  312  0  ~/xv6/proc.c
+-'  258  6  ~/xv6/proc.c
+-'  116  17  ~/xv6/lab1.c
+-'  62  2  ~/xv6/lab1.c
+-'  75  1  ~/xv6/lab1.c
+-'  1  0  ~/xv6/lab1.c
+-'  126  1  ~/xv6/lab1.c
+-'  26  25  ~/xv6/user.h
+-'  127  2  ~/xv6/lab1.c
+-'  125  2  ~/xv6/lab1.c
+-'  1  0  ~/xv6/user.c
+-'  7  0  ~/xv6/user.h
+-'  111  0  ~/xv6/defs.h
+-'  120  0  ~/xv6/defs.h
+-'  1787  9  ~/xv6/usertests.c
+-'  294  2  ~/xv6/usertests.c
+-'  1785  2  ~/xv6/usertests.c
+-'  1551  0  ~/xv6/usertests.c
+-'  45  0  ~/xv6/stressfs.c
+-'  47  0  ~/xv6/stressfs.c
+-'  169  4  ~/xv6/sh.c
+-'  182  4  ~/xv6/sh.c
+-'  260  0  ~/xv6/sh.c
+-'  56  0  ~/xv6/sh.c
+-'  493  0  ~/xv6/sh.c
+-'  34  21  ~/xv6/init.c
+-'  1  0  ~/xv6/init.c
+-'  55  2  ~/xv6/forktest.c
+-'  37  18  ~/xv6/forktest.c
+-'  40  4  ~/xv6/forktest.c
+-'  20  0  ~/xv6/forktest.c
+-'  45  4  ~/xv6/forktest.c
+-'  19  1  ~/xv6/lab1.c
+-'  117  0  ~/xv6/defs.h
+-'  1  0  ~/xv6/user.h
+-'  1  0  ~/xv6/defs.h
+-'  533  2  ~/xv6/proc.c
 -'  14  0  ~/xv6/zombie.c
 -'  1  0  ~/xv6/zombie.c
 -'  54  0  ~/xv6/wc.c
 -'  47  0  ~/xv6/wc.c
 -'  1  0  ~/xv6/wc.c
--'  1551  0  ~/xv6/usertests.c
 -'  573  16  ~/xv6/usertests.c
 -'  455  2  ~/xv6/usertests.c
--'  533  1  ~/xv6/proc.c
 -'  1  0  ~/xv6/proc.c
--'  1  0  ~/xv6/sysproc.c
 -'  11  0  ~/xv6/sysproc.c
 -'  1  0  ~/xv6/usertests.c
--'  47  0  ~/xv6/stressfs.c
 -'  1  0  ~/xv6/stressfs.c
 -'  1  0  ~/xv6/stresssfs.c
--'  493  0  ~/xv6/sh.c
 -'  1  0  ~/xv6/sh.c
 -'  23  0  ~/xv6/rm.c
 -'  1  0  ~/xv6/rm.c
@@ -82,12 +131,9 @@ $exit(0)
 -'  1  0  ~/xv6/ln.c
 -'  14  7  ~/xv6/kill.c
 -'  1  0  ~/xv6/kill.c
--'  1  0  ~/xv6/init.c
 -'  7  0  ~/xv6/init.c
 -'  1  0  ~/xv6/grep.c
 -'  69  0  ~/xv6/grep.c
--'  45  9  ~/xv6/forktest.c
--'  55  2  ~/xv6/forktest.c
 -'  1  0  ~/xv6/forktest.c
 -'  12  7  ~/xv6/echo.c
 -'  1  0  ~/xv6/echo.c
@@ -95,8 +141,6 @@ $exit(0)
 -'  31  4  ~/xv6/cat.c
 -'  7  0  ~/xv6/lab1.c
 -'  3  0  ~/xv6/lab1.c
--'  26  2  ~/xv6/sysproc.c
--'  7  11  ~/xv6/user.h
 -'  6  0  ~/xv6/user.h
 -'  107  23  ~/xv6/defs.h
 -'  109  0  ~/xv6/defs.h
@@ -108,7 +152,6 @@ $exit(0)
 -'  44  1  ~/xv6/Makefile
 -'  15  3  ~/.gitignore
 -'  16  0  ~/.gitignore
--'  1  0  ~/xv6/lab1.c
 -'  1  0  ~/xv6/qemu-nox-gdb
 -'  306  0  ~/xv6/usertests.c
 -'  150  1  ~/xv6/Makefile
@@ -120,57 +163,71 @@ $exit(0)
 -'  105  1  ~/xv6/Makefile
 -'  1  0  ~/.gitignore
 -'  1  0  ~/.gdbinit.tmp1
--'  1  0  ~/.gdbinit
--'  27  0  ~/.gdbinit
--'  2  0  ~/.gdbinit
--'  27  0  ~/xv6/.gdbinit
--'  1  4  ~/xv6/test2.c
--'  1  3  ~/xv6/test.c
--'  1  0  ~/xv6/Makefile
--'  313  11  ~/xv6/proc.c
--'  312  4  ~/xv6/proc.c
--'  37  14  ~/xv6/proc.h
--'  52  2  ~/xv6/proc.h
--'  288  8  ~/xv6/proc.c
--'  19  2  ~/xv6/sysproc.c
--'  235  2  ~/xv6/proc.c
--'  123  0  ~/xv6/defs.h
--'  16  0  ~/xv6/user.h
--'  4  0  ~/xv6/sysproc.c
--'  110  2  ~/xv6/proc.c
--'  45  2  ~/xv6/proc.h
--'  1  0  ~/xv6/proc.h
--'  242  4  ~/xv6/proc.c
--'  160  0  ~/xv6/defs.h
--'  1  0  ~/xv6/def.h
--'  1  0  ~/xv6/defs.h
--'  1  0  ~/xv6/user.h
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/.gdbinit
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
--'  1  0  ~/xv6/gdb
 
 # History of marks within files (newest to oldest):
 
-> ~/xv6/zombie.c
-	"	14	0
-	^	14	1
-	.	13	7
-	+	13	7
+> ~/xv6/trap.c
+	"	111	4
+	.	41	0
+	+	41	0
 
-> ~/xv6/wc.c
-	"	54	0
-	.	30	0
-	+	30	0
+> ~/xv6/sysproc.c
+	"	26	14
+	^	26	15
+	.	26	14
+	+	19	7
+	+	26	14
+
+> ~/xv6/proc.c
+	"	508	0
+	^	508	0
+	.	534	0
+	+	228	14
+	+	534	0
+	+	273	15
+	+	534	0
+
+> ~/xv6/lab1.c
+	"	116	17
+	^	116	18
+	.	116	17
+	+	17	2
+	+	15	2
+	+	19	1
+	+	17	1
+	+	15	1
+	+	76	1
+	+	95	1
+	+	113	5
+	+	114	14
+	+	114	17
+	+	75	15
+	+	75	1
+	+	76	0
+	+	62	3
+	+	105	21
+	+	116	17
+
+> ~/xv6/user.h
+	"	26	25
+	^	26	26
+	.	26	25
+	+	7	12
+	+	26	25
+
+> ~/xv6/user.c
+	"	1	0
+
+> ~/xv6/defs.h
+	"	111	0
+	^	120	25
+	.	120	24
+	+	120	24
 
 > ~/xv6/usertests.c
-	"	1551	0
-	^	548	3
-	.	41	0
+	"	1787	9
+	^	1787	10
+	.	1785	11
 	+	24	9
 	+	28	9
 	+	32	9
@@ -218,39 +275,60 @@ $exit(0)
 	+	533	11
 	+	540	13
 	+	41	0
-
-> ~/xv6/proc.c
-	"	533	1
-	^	534	1
-	.	534	0
-	+	228	14
-	+	534	0
-
-> ~/xv6/sysproc.c
-	"	1	0
-	^	1	1
-	.	19	7
-	+	19	7
+	+	69	0
+	+	1785	11
 
 > ~/xv6/stressfs.c
-	"	47	0
-	^	47	0
-	.	48	7
+	"	45	0
+	^	45	0
+	.	46	7
 	+	48	7
-
-> ~/xv6/stresssfs.c
-	"	1	0
+	+	46	7
 
 > ~/xv6/sh.c
-	"	493	0
+	"	169	4
 	^	493	1
-	.	178	7
+	.	96	0
 	+	68	9
 	+	77	11
 	+	87	11
 	+	130	7
 	+	171	7
 	+	178	7
+	+	96	0
+
+> ~/xv6/init.c
+	"	34	21
+	^	34	22
+	.	34	21
+	+	27	11
+	+	32	11
+	+	34	21
+
+> ~/xv6/forktest.c
+	"	55	2
+	^	45	10
+	.	37	0
+	+	28	11
+	+	33	9
+	+	39	11
+	+	55	7
+	+	45	9
+	+	37	0
+
+> ~/xv6/zombie.c
+	"	14	0
+	^	14	1
+	.	13	7
+	+	13	7
+
+> ~/xv6/wc.c
+	"	54	0
+	.	30	0
+	+	30	0
+
+> ~/xv6/stresssfs.c
+	"	1	0
 
 > ~/xv6/rm.c
 	"	23	0
@@ -286,57 +364,3 @@ $exit(0)
 	.	16	7
 	+	12	9
 	+	16	7
-
-> ~/xv6/init.c
-	"	1	0
-	^	1	1
-	.	32	11
-	+	27	11
-	+	32	11
-
-> ~/xv6/grep.c
-	"	1	0
-	^	1	1
-	.	63	7
-	+	46	9
-	+	52	9
-	+	58	11
-	+	63	7
-
-> ~/xv6/forktest.c
-	"	45	9
-	^	45	10
-	.	45	9
-	+	28	11
-	+	33	9
-	+	39	11
-	+	55	7
-	+	45	9
-
-> ~/xv6/echo.c
-	"	12	7
-	^	12	8
-	.	12	7
-	+	12	7
-
-> ~/xv6/cat.c
-	"	1	2
-	^	40	3
-	.	42	7
-	+	20	9
-	+	31	9
-	+	37	11
-	+	15	11
-	+	42	7
-
-> ~/xv6/lab1.c
-	"	7	0
-	^	24	0
-	.	24	0
-	+	24	0
-
-> ~/xv6/user.h
-	"	7	11
-	^	7	12
-	.	6	11
-	+	6	11

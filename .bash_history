@@ -216,3 +216,362 @@ git status
 git add .
 git commit
 git push
+ls
+cd xv6
+ls
+cd ..
+ls
+ls -lha
+cd xv6
+ls
+git remote -v
+git push
+git status
+git add test2.c
+git commit
+git push
+git pull
+git branch
+git branch --set-upstream-to=origin/master
+git pull
+cd ..
+git status
+git add .
+git commit
+cd xv6
+git pull
+vim .gdbinit
+mv .gdbinit ..
+git pull
+ls
+git push
+cd ..
+ls
+cd xv6
+ls
+rm *.
+mr .
+rm .
+cd ..
+rm -r xv6
+ls
+rm -rf xv6
+ls
+git status
+git add .
+git status
+git rm xv6
+ls
+git status
+ls -lha
+vim .gdbinit
+git commit
+git push
+git pull
+ls
+rm .
+rm *.c
+rm *.h
+rm *.s
+ls
+rm *.S
+rm *.pl
+rm *.ftr
+rm *.ld
+ls
+rm *.p
+
+
+rm *.spec
+ls
+rm LICENSE
+rm Makefile
+rm Makefilegdbutil
+rm gdbutil
+rm BUGS
+rm cuth
+rm Notes README TRICKS
+ls
+rm dot-bochsrc printpcs runoff runoff1 show1 spinp
+ls
+ls -lha
+vim .gdbinit.tmp1
+rm .cvsignore
+ls -lha
+rm .dir-locals.el
+ls
+ls -lha
+rm .gitbinit.tmp1
+rm .gdbinit.tmp1
+vim .gdbinit.tmp1
+vim .gdbinit
+rm .gdbinit
+ls -hla
+vim .gdbinit
+vim .gdbinit.tmp1
+vim .gitignore
+git status
+git rm .
+git rm -r .
+git rm *.c
+git rm *.h
+git status
+git rm *.S
+git status
+git rm *.pl
+git rm *.p
+git rm *.ghr
+git rm *.hdr
+git rm *.ftr
+git status
+git rm *.ld
+git rm *.spec
+git rm *.list
+git rm *.
+git status
+git rm BUGS LICENCE
+git rm LICENSE Makefile
+git status
+git rm BUGS Notes README TRICKS cuth dot-bochsrc
+git status
+git rm spinp show1 runoff1 runoff printpcs gdbutil 
+git status
+git rm .cvsignore .dir-locals.el .gdbinit
+git status
+git add .viminfo
+git status
+git commit
+git push
+git pull
+ls
+ls -lha
+git clone https://github.com/mit-pdos/xv6-public.git xv6
+ls
+git status
+git submodule update --init --recursive
+cd xv6
+ls
+git status
+git remote
+git remote -v
+git push
+cd ..
+ls
+git remote -v
+cd xv6
+git remote -v
+cd ..
+git status
+git add xv6/
+git commit
+git push
+cd xv6
+vim testfile.txt
+git status
+git add testfile.txt
+git commit
+git push
+cd ..
+ls
+git status
+git add xv6/testfile.txt
+git commit
+git push
+ls
+cd xv6
+ls
+cd ..
+git pull
+ls
+cd xv6
+ls
+ls -lha
+vim Makefile
+cd ..
+git status
+cd xv6
+make
+ls -lha
+echo "add-auto-load-safe-path $HOME/xv6/.gdbinit" > ~/.gdbinit
+cd ..
+ls -lha
+git status
+git add xv6/Makefile
+git add .viminfo
+git status
+git commit
+git push
+ls
+cd xv6
+make
+./lab1.c
+ls
+vim Makefile
+make
+vim Makefile
+make lab1.c
+vim testfile.txt
+rm testfile.txt
+ls
+vim Makefiel
+vim Makefile
+ls-lha
+la -lha
+ls -lha
+vim usertests.c
+vim qemu-nox-gdb
+make qemu-nox-gdb
+vim lab1.c
+cd ..
+git status
+vim .gitignore
+git status
+git add .
+git status
+git rm xv6/testfile.txt
+git status
+git commit
+git push
+ls
+cd xv6
+make
+make qemu-nox-gdb
+make qemu-gdb
+vim Makefile
+vim lab1.c
+ls
+vim types.h 
+vim user.h
+grep void exit
+grep exit(void)
+grep "void exit"
+grep void
+grep exit(void)
+grep "exit(void)"
+vim user.h
+grep int exit
+gre pexit
+grep exit
+ps
+ps -w
+ps -wxxf
+ls
+grep exit
+grep exit *.h
+grep exit *.c
+ls
+grep void exit *.h
+grep void exit *.c
+grep "void exit" *.c
+grep exit *.c
+grep exit *.h
+vim defs.h
+vim user.h
+vim sysproc.c
+make qemu-nox-gdb
+vim lab1.c
+vim cat.c
+make qemu-nox-gdb
+vim echo.c
+make qemu-nox-gdb
+vim forktest.c
+make qemu-nox-gdb
+vim forktest.c
+make qemu-nox-gdb
+vim forktest.c
+make qemu-nox-gdb
+vim grep.c
+make qemu-nox-gdb
+vim init.c
+make qemu-nox-gdb
+vim kill.c
+make qemu-nox-gdb
+vim ln.c
+make qemu-nox-gdb
+vim ls.c
+make qemu-nox-gdb
+vim mkdir.c
+make qemu-nox-gdb
+vim rm.c
+make qemu-nox-gdb
+vim sh.c
+make qemu-nox-gdb
+vim stresssfs.c
+vim stressfs.c
+make qemu-nox-gdb
+vim usertests.c
+vim sysproc.c
+vim proc.c
+make qemu-nox-gdb
+vim usertests.c
+make qemu-nox-gdb
+vim wc.c
+make qemu-nox-gdb
+vim zombie.c
+make qemu-nox-gdb
+cd ..
+git status
+git add xv6/*.c
+git status
+git add xv6/*.h
+git status
+git add .viminfo
+git status
+git commit
+git push
+cd xv6
+make qemu-nox-gdb
+grep wait *.h
+vim proc.c
+vim defs.h
+vim user.h
+make qemu-nox-gdb
+grep wait *.c
+grep wait() *.c
+grep wait(\) *.c
+grep wait *.c | grep -v waitpid
+grep wait *.c
+grep wait *.c | grep -v waitpid
+vim user.h
+vim defs.h
+make qemu-nox-gdb
+vim lab1.c
+make qemu-nox-gdb
+vim lab1.c
+vim user.h
+vim defs.h
+grep wait *.h
+make qemu-nox-gdb
+vim forktest.c
+make qemu-nox-gdb
+vim init.c
+make qemu-nox-gdb
+vim sh.c
+make qemu-nox-gdb
+vim stressfs.c
+make qemu-nox-gdb
+vim usertests.c
+make qemu-nox-gdb
+vim user.h
+vim defs.h
+vim user.h
+vim user.c
+make qemu-nox-gdb
+vim lab1.c
+vim user.h
+vim lab1.c
+make qemu-nox-gdb
+vim lab1.c
+make qemu-nox-gdb
+vim lab1.c
+make qemu-nox-gdb
+vim lab1.c
+make qemu-nox-gdb
+vim proc.c
+make qemu-nox-gdb
+vim proc.c
+make qemu-nox-gdb
+vim sysproc.c
+make qemu-nox-gdb
+vim trap.c
+make qemu-nox-gdb

@@ -59,7 +59,7 @@ int exitWait(void) {
 
 int waitPid(void){
 	
-  int ret_pid, exit_status;
+  //int ret_pid, exit_status;
   int i;
   int pid_a[5]={0, 0, 0, 0, 0};
  // use this part to test wait(int pid, int* status, int options)
@@ -73,7 +73,7 @@ int waitPid(void){
 			exit(getpid() + 4);
 		}
 	}
-       
+/*       
       sleep(5);
       printf(1, "\n This is the parent: Now waiting for child with PID# %d\n",pid_a[3]);
       ret_pid = waitpid(pid_a[3], &exit_status, 0);
@@ -94,7 +94,7 @@ int waitPid(void){
       printf(1, "\n This is the parent: Now waiting for child with PID# %d\n",pid_a[4]);
       ret_pid = waitpid(pid_a[4], &exit_status, 0);
       printf(1, "\n This is the partent: Child# %d has exited with status %d\n",ret_pid, exit_status);
-      
+*/      
       return 0;
   }
 
@@ -102,7 +102,7 @@ int CELEBW02(void){
 	
  printf(1, "\n  Part e) the waitpid option WNOHANG, test program CELEBW02 \n");
 
-  int pid, retpid;
+  int pid, retpid = -1;
   int status;
 
   if ((pid = fork()) < 0)
@@ -112,7 +112,8 @@ int CELEBW02(void){
     exit(1);
   }
   else do {
-    if ((retpid = waitpid(pid, &status, WNOHANG)) == -1)
+    //if ((retpid = waitpid(pid, &status, WNOHANG)) == -1)
+    if(retpid == -1)
       printf(2, "wait() error");
     else if (retpid == 0) {
       printf(1, "child is still running \n");
