@@ -276,8 +276,8 @@ wait(int* status)
 {
   struct proc *p;
   int havekids, pid;
-  struct proc *curproc = myproc();
-  
+  struct proc *curproc = myproc(); 
+ 
   acquire(&ptable.lock);
   for(;;){
     // Scan through table looking for exited children.
@@ -296,18 +296,20 @@ wait(int* status)
         p->parent = 0;
         p->name[0] = 0;
         p->killed = 0;
+        if (status) 
+	  *status = p->exit_status;
         p->state = UNUSED;
         release(&ptable.lock);
         return pid;
       }
     }
-
     // No point waiting if we don't have any children.
     if(!havekids || curproc->killed){
       release(&ptable.lock);
+      if(status) 
+	*status = p->exit_status;
       return -1;
-    }
-
+    } 
     // Wait for children to exit.  (See wakeup1 call in proc_exit.)
     sleep(curproc, &ptable.lock);  //DOC: wait-sleep
   }

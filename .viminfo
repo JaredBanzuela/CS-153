@@ -6,28 +6,30 @@
 
 
 # hlsearch on (H) or off (h):
-~H
+~h
 # Last Search Pattern:
-~MSle0/exit()
+~Msle0~/\<exit_status\>
 
 # Last Substitute Search Pattern:
-~MSle0~&exit()
+~MSle0&exit()
 
 # Last Substitute String:
 $exit(0)
 
 # Command Line History (newest to oldest):
 :x
-:%s/exit()/exit(0)/g
-:q!
 :q
+:noh
+:q!
+:w
+:%s/exit()/exit(0)/g
 :%s/wait()/wait(0)/g
 :set hlsearch
-:noh
 :set lhsearch
 :set hlsearch /exit
 
 # Search String History (newest to oldest):
+? \<exit_status\>
 ? exit()
 ?/exit()
 ?/waitpid
@@ -44,36 +46,77 @@ $exit(0)
 
 # Registers:
 ""1	LINE	0
-		exit_status = 0;
+	  int exst = myproc()->exit_status;
 "2	LINE	0
-		ret_pid = 0;
+	  curproc->exit_status = *status;
 "3	LINE	0
-		 exit(0);
+	    curproc->exit_status = *status;
+"4	LINE	0
+	#include <stdio.h>
+"5	LINE	0
+	    printf("\n This is curproc exit_status %d\n", es);
+"6	LINE	0
+	    int es = curproc->exit_status;
+"7	LINE	0
+	    curproc->exit_status = *status;
+	    // No point waiting if we don't have any children.
+"8	LINE	0
+	    int es = curproc->exit_status;
+"9	LINE	0
+	    printf("\n This is curproc exit_status %d\n", es);
 "-	CHAR	0
 	}
 
 # File marks:
-'0  111  4  ~/xv6/trap.c
-'1  26  14  ~/xv6/sysproc.c
-'2  508  0  ~/xv6/proc.c
-'3  312  0  ~/xv6/proc.c
-'4  116  17  ~/xv6/lab1.c
-'5  62  3  ~/xv6/lab1.c
-'6  75  0  ~/xv6/lab1.c
-'7  1  0  ~/xv6/lab1.c
-'8  26  25  ~/xv6/user.h
-'9  126  1  ~/xv6/lab1.c
+'0  22  0  ~/xv6/sysproc.c
+'1  59  2  ~/xv6/proc.h
+'2  300  3  ~/xv6/proc.c
+'3  279  33  ~/xv6/proc.c
+'4  26  0  ~/xv6/sysproc.c
+'5  26  25  ~/xv6/sysproc.c
+'6  280  4  ~/xv6/proc.c
+'7  52  2  ~/xv6/proc.h
+'8  313  0  ~/xv6/proc.c
+'9  309  16  ~/xv6/proc.c
 
 # Jumplist (newest first):
+-'  22  0  ~/xv6/sysproc.c
+-'  26  2  ~/xv6/sysproc.c
+-'  59  2  ~/xv6/proc.h
+-'  52  2  ~/xv6/proc.h
+-'  300  3  ~/xv6/proc.c
+-'  279  2  ~/xv6/proc.c
+-'  280  2  ~/xv6/proc.c
+-'  313  4  ~/xv6/proc.c
+-'  49  2  ~/xv6/proc.h
+-'  19  2  ~/xv6/sysproc.c
+-'  309  6  ~/xv6/proc.c
+-'  308  6  ~/xv6/proc.c
+-'  1  0  ~/xv6/sysproc.h
+-'  51  2  ~/xv6/proc.h
+-'  306  4  ~/xv6/proc.c
+-'  10  0  ~/xv6/proc.c
+-'  301  8  ~/xv6/proc.c
+-'  45  0  ~/xv6/lab1.c
+-'  49  6  ~/xv6/lab1.c
+-'  275  0  ~/xv6/proc.c
+-'  50  6  ~/xv6/lab1.c
+-'  298  23  ~/xv6/proc.c
+-'  305  4  ~/xv6/proc.c
+-'  116  4  ~/xv6/lab1.c
+-'  303  8  ~/xv6/proc.c
+-'  241  4  ~/xv6/proc.c
+-'  50  2  ~/xv6/proc.h
+-'  1  0  ~/xv6/proc.c
+-'  1  0  ~/xv6/proc.h
+-'  508  2  ~/xv6/proc.c
+-'  1  0  ~/proc.c
 -'  111  4  ~/xv6/trap.c
 -'  27  0  ~/xv6/trap.c
 -'  1  0  ~/xv6/trap.c
--'  26  14  ~/xv6/sysproc.c
 -'  1  0  ~/xv6/sysproc.c
--'  508  0  ~/xv6/proc.c
 -'  312  0  ~/xv6/proc.c
--'  258  6  ~/xv6/proc.c
--'  116  17  ~/xv6/lab1.c
+-'  260  6  ~/xv6/proc.c
 -'  62  2  ~/xv6/lab1.c
 -'  75  1  ~/xv6/lab1.c
 -'  1  0  ~/xv6/lab1.c
@@ -115,7 +158,6 @@ $exit(0)
 -'  1  0  ~/xv6/wc.c
 -'  573  16  ~/xv6/usertests.c
 -'  455  2  ~/xv6/usertests.c
--'  1  0  ~/xv6/proc.c
 -'  11  0  ~/xv6/sysproc.c
 -'  1  0  ~/xv6/usertests.c
 -'  1  0  ~/xv6/stressfs.c
@@ -135,60 +177,82 @@ $exit(0)
 -'  1  0  ~/xv6/grep.c
 -'  69  0  ~/xv6/grep.c
 -'  1  0  ~/xv6/forktest.c
--'  12  7  ~/xv6/echo.c
--'  1  0  ~/xv6/echo.c
--'  1  2  ~/xv6/cat.c
--'  31  4  ~/xv6/cat.c
--'  7  0  ~/xv6/lab1.c
--'  3  0  ~/xv6/lab1.c
--'  6  0  ~/xv6/user.h
--'  107  23  ~/xv6/defs.h
--'  109  0  ~/xv6/defs.h
--'  2  0  ~/xv6/types.h
--'  1  0  ~/xv6/types.h
--'  24  2  ~/xv6/lab1.c
--'  26  1  ~/xv6/lab1.c
--'  216  24  ~/xv6/Makefile
--'  44  1  ~/xv6/Makefile
--'  15  3  ~/.gitignore
--'  16  0  ~/.gitignore
--'  1  0  ~/xv6/qemu-nox-gdb
--'  306  0  ~/xv6/usertests.c
--'  150  1  ~/xv6/Makefile
--'  1  0  ~/xv6/Makefiel
--'  1  0  ~/xv6/testfile.txt
--'  205  0  ~/xv6/Makefile
--'  65  1  ~/xv6/Makefile
--'  184  1  ~/xv6/Makefile
--'  105  1  ~/xv6/Makefile
--'  1  0  ~/.gitignore
--'  1  0  ~/.gdbinit.tmp1
 
 # History of marks within files (newest to oldest):
 
-> ~/xv6/trap.c
-	"	111	4
-	.	41	0
-	+	41	0
-
 > ~/xv6/sysproc.c
-	"	26	14
-	^	26	15
+	"	22	0
+	^	24	1
 	.	26	14
 	+	19	7
 	+	26	14
+	+	19	7
+	+	19	25
+	+	26	32
+	+	19	14
+	+	26	21
+	+	26	30
+	+	26	14
+	+	26	5
+	+	26	14
+	+	26	6
+	+	26	14
+	+	19	7
+	+	26	14
+
+> ~/xv6/proc.h
+	"	59	2
+	^	50	11
+	.	52	10
+	+	52	10
 
 > ~/xv6/proc.c
-	"	508	0
-	^	508	0
-	.	534	0
+	"	300	3
+	^	279	34
+	.	280	0
 	+	228	14
 	+	534	0
-	+	273	15
+	+	275	15
 	+	534	0
+	+	234	10
+	+	306	55
+	+	307	0
+	+	306	11
+	+	306	47
+	+	306	4
+	+	306	0
+	+	279	36
+	+	303	17
+	+	298	40
+	+	275	8
+	+	298	22
+	+	301	0
+	+	306	34
+	+	306	4
+	+	10	17
+	+	306	49
+	+	306	33
+	+	306	0
+	+	306	0
+	+	10	0
+	+	9	0
+	+	306	0
+	+	280	1
+	+	280	2
+	+	280	0
+	+	300	28
+	+	310	25
+	+	255	54
+	+	256	0
+	+	300	2
+	+	280	0
+	+	280	0
+
+> ~/xv6/sysproc.h
+	"	1	0
 
 > ~/xv6/lab1.c
-	"	116	17
+	"	45	0
 	^	116	18
 	.	116	17
 	+	17	2
@@ -207,6 +271,14 @@ $exit(0)
 	+	62	3
 	+	105	21
 	+	116	17
+
+> ~/proc.c
+	"	1	0
+
+> ~/xv6/trap.c
+	"	111	4
+	.	41	0
+	+	41	0
 
 > ~/xv6/user.h
 	"	26	25
@@ -343,24 +415,3 @@ $exit(0)
 	.	22	7
 	+	12	9
 	+	22	7
-
-> ~/xv6/ls.c
-	"	84	7
-	^	84	8
-	.	84	7
-	+	80	9
-	+	84	7
-
-> ~/xv6/ln.c
-	"	14	7
-	^	14	8
-	.	14	7
-	+	10	9
-	+	14	7
-
-> ~/xv6/kill.c
-	"	14	7
-	^	14	8
-	.	16	7
-	+	12	9
-	+	16	7

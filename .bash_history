@@ -575,3 +575,56 @@ vim sysproc.c
 make qemu-nox-gdb
 vim trap.c
 make qemu-nox-gdb
+cd xv6
+gdb
+ls
+cd ..
+git status
+git add xv6/*.c
+git status
+git add xv6/*h
+git add xv6/*.h
+ps
+ps -wxf
+git status
+git add .bash_history .viminfo
+git status
+git commit
+git push
+vim proc.c
+cd xv6
+vim proc.c
+vim proc.h
+vim sysproc.h
+vim proc.c
+cd ..
+git status
+git add xv6/proc.*
+git add xv6/proc.c
+git add xv6/proc.h
+git commit
+git push
+ls
+cd xv6
+ls
+make quemu-nox-gdb
+make qemu-nox-gdb
+ls
+cd xv6
+ls
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
+cd xv6
+ls
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
+cd xv6
+make qemu-nox-gdb
