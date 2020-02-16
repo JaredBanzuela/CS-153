@@ -628,3 +628,113 @@ cd xv6
 make qemu-nox-gdb
 cd xv6
 make qemu-nox-gdb
+ls
+cd xv6
+ls
+vim proc.h
+vim proc.c
+make
+gdb -q
+ls
+vim proc.c
+vim sysproc.c
+vim proc.c
+make
+gdb -q
+vim proc.c
+make
+vim proc.c
+vim lab1.c
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+make
+vim lab1.c
+vim proc.c
+make
+gdb -q
+ls
+vim lab1.c
+vim proc.c
+make
+gdb
+gdb -q
+ls
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+make
+vim proc.c
+ps
+vim proc.c
+make
+gdb -q
+vim proc.h
+vim sysproc.c
+vim sysproc.h
+vim sysproc.c
+vim proc.c
+make
+gdb -q
+vim proc.c
+vim sysproc.c
+make
+vim proc.h
+vim sysproc.c
+make
+vim sysproc.c
+make
+vim sysproc.c
+make
+vim proc.c
+vim sysproc.c
+make
+vim sysproc.c
+make
+vim sysproc.c
+make
+vim sysproc.c
+make
+gdb -q
+ls
+vim proc.c
+make
+gdb -q
+vim proc.c
+gdb -q
+vim proc.c
+vim proc.h
+vim sysproc.c
+make clean
+ls
+cd ..
+git status
+git add .
+ls
+git status
+git add xv6/proc.c
+git status
+git commit
+git push
+ls
+git pull
+ls
+zip -r lab1-jbanz001.zip xv6
+ls
+git status
+git add .
+git status
+git commit
+git push
+quit
+exit

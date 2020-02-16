@@ -68,23 +68,28 @@ $exit(0)
 	}
 
 # File marks:
-'0  22  0  ~/xv6/sysproc.c
-'1  59  2  ~/xv6/proc.h
-'2  300  3  ~/xv6/proc.c
-'3  279  33  ~/xv6/proc.c
-'4  26  0  ~/xv6/sysproc.c
-'5  26  25  ~/xv6/sysproc.c
-'6  280  4  ~/xv6/proc.c
-'7  52  2  ~/xv6/proc.h
-'8  313  0  ~/xv6/proc.c
-'9  309  16  ~/xv6/proc.c
+'0  185  6  ~/xv6/Makefile
+'1  53  0  ~/xv6/lab2.c
+'2  333  9  ~/xv6/proc.c
+'3  22  0  ~/xv6/sysproc.c
+'4  59  2  ~/xv6/proc.h
+'5  300  3  ~/xv6/proc.c
+'6  279  33  ~/xv6/proc.c
+'7  26  0  ~/xv6/sysproc.c
+'8  26  25  ~/xv6/sysproc.c
+'9  280  4  ~/xv6/proc.c
 
 # Jumplist (newest first):
+-'  185  6  ~/xv6/Makefile
+-'  1  0  ~/xv6/Makefile
+-'  53  0  ~/xv6/lab2.c
+-'  1  0  ~/xv6/lab2.c
+-'  333  9  ~/xv6/proc.c
+-'  300  3  ~/xv6/proc.c
 -'  22  0  ~/xv6/sysproc.c
 -'  26  2  ~/xv6/sysproc.c
 -'  59  2  ~/xv6/proc.h
 -'  52  2  ~/xv6/proc.h
--'  300  3  ~/xv6/proc.c
 -'  279  2  ~/xv6/proc.c
 -'  280  2  ~/xv6/proc.c
 -'  313  4  ~/xv6/proc.c
@@ -174,40 +179,20 @@ $exit(0)
 -'  14  7  ~/xv6/kill.c
 -'  1  0  ~/xv6/kill.c
 -'  7  0  ~/xv6/init.c
--'  1  0  ~/xv6/grep.c
--'  69  0  ~/xv6/grep.c
--'  1  0  ~/xv6/forktest.c
 
 # History of marks within files (newest to oldest):
 
-> ~/xv6/sysproc.c
-	"	22	0
-	^	24	1
-	.	26	14
-	+	19	7
-	+	26	14
-	+	19	7
-	+	19	25
-	+	26	32
-	+	19	14
-	+	26	21
-	+	26	30
-	+	26	14
-	+	26	5
-	+	26	14
-	+	26	6
-	+	26	14
-	+	19	7
-	+	26	14
+> ~/xv6/Makefile
+	"	185	6
+	^	185	7
+	.	185	6
+	+	185	6
 
-> ~/xv6/proc.h
-	"	59	2
-	^	50	11
-	.	52	10
-	+	52	10
+> ~/xv6/lab2.c
+	"	53	0
 
 > ~/xv6/proc.c
-	"	300	3
+	"	333	9
 	^	279	34
 	.	280	0
 	+	228	14
@@ -247,6 +232,32 @@ $exit(0)
 	+	300	2
 	+	280	0
 	+	280	0
+
+> ~/xv6/sysproc.c
+	"	22	0
+	^	24	1
+	.	26	14
+	+	19	7
+	+	26	14
+	+	19	7
+	+	19	25
+	+	26	32
+	+	19	14
+	+	26	21
+	+	26	30
+	+	26	14
+	+	26	5
+	+	26	14
+	+	26	6
+	+	26	14
+	+	19	7
+	+	26	14
+
+> ~/xv6/proc.h
+	"	59	2
+	^	50	11
+	.	52	10
+	+	52	10
 
 > ~/xv6/sysproc.h
 	"	1	0
@@ -401,17 +412,3 @@ $exit(0)
 
 > ~/xv6/stresssfs.c
 	"	1	0
-
-> ~/xv6/rm.c
-	"	23	0
-	^	23	1
-	.	22	7
-	+	12	9
-	+	22	7
-
-> ~/xv6/mkdir.c
-	"	23	0
-	^	23	1
-	.	22	7
-	+	12	9
-	+	22	7
